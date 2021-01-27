@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import { getTweets } from "services/HttpService";
-import "App.css";
 import styled from "styled-components";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Tweet from "components/Tweet";
