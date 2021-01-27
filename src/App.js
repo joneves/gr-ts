@@ -4,9 +4,7 @@ import "App.css";
 import styled from "styled-components";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Tweet from "components/Tweet";
-import {move, reorder} from "utils/helpers";
-
-const AppWrapper = styled.div``;
+import { move, reorder } from "utils/helpers";
 
 const StyledHeader = styled.header`
   height: 80px;
@@ -35,7 +33,6 @@ const ListContainer = styled.div`
 const grid = 4;
 
 const getItemStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the items look a bit nicer
   userSelect: "none",
   padding: grid * 2,
   margin: `0 0 ${grid}px 0`,
@@ -98,7 +95,7 @@ const App = () => {
   };
 
   return (
-    <AppWrapper>
+    <div>
       <StyledHeader className="App-header">Tweet Saver</StyledHeader>
       <Main>
         <input ref={textField} type="text" />
@@ -182,7 +179,7 @@ const App = () => {
           </DragDropContext>
         </ListContainer>
       </Main>
-    </AppWrapper>
+    </div>
   );
 }
 

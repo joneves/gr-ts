@@ -1,12 +1,12 @@
-const BASE_URL = `http://localhost:${process.env.REACT_APP_PROXY_PORT || 4000}/`;
+const BASE_URL = `http://localhost:${
+  process.env.REACT_APP_PROXY_PORT || 4000
+}/`;
 
 export const getTweets = async (search) => {
   const headers = new Headers();
-  
+
   headers.append("Content-Type", "application/json");
 
-  debugger;
-  
   const request = new Request(
     `${BASE_URL}1.1/search/tweets.json?q=${encodeURIComponent(
       search,
