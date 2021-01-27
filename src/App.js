@@ -55,8 +55,6 @@ const App = () => {
 
   const onButtonClick = async () => {
     const response = await getTweets(textField.current?.value);
-
-    console.log(response);
     setTweets(response.statuses);
 
     return;
